@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://b58lt3rfsi46b"]
+
+[ext_resource type="Texture2D" uid="uid://c6w6wfgt07uel" path="res://assets/layers/layer07_Sky.png" id="1_bkp1e"]
+[ext_resource type="Texture2D" uid="uid://btdgfc0lg3x26" path="res://assets/layers/layer06_Rocks.png" id="2_y0upk"]
+[ext_resource type="Texture2D" uid="uid://ddvnsi8grhs5e" path="res://assets/layers/layer05_Clouds.png" id="3_jougr"]
+[ext_resource type="Texture2D" uid="uid://i3ok305m8qcb" path="res://assets/layers/layer03_Hills_1.png" id="4_wisxt"]
+[ext_resource type="Texture2D" uid="uid://dqijecpi8yksx" path="res://assets/layers/layer04_Hills_2.png" id="5_wax1t"]
+[ext_resource type="Texture2D" uid="uid://bjggd532wwjc4" path="res://assets/layers/layer02_Trees.png" id="6_wax1t"]
+
+[node name="Background" type="Node2D"]
+
+[node name="Sky" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0, 1)
+scroll_offset = Vector2(0, -3.14)
+repeat_size = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sky"]
+texture = ExtResource("1_bkp1e")
+
+[node name="Rocks" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.1, 1)
+repeat_size = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Rocks"]
+texture = ExtResource("2_y0upk")
+
+[node name="Clouds" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.3, 1)
+scroll_offset = Vector2(1, 0)
+repeat_size = Vector2(1920, 0)
+autoscroll = Vector2(1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Clouds"]
+texture = ExtResource("3_jougr")
+
+[node name="Hills_2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.7, 1)
+repeat_size = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Hills_2"]
+texture = ExtResource("5_wax1t")
+
+[node name="Hills_1" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.8, 1)
+repeat_size = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Hills_1"]
+texture = ExtResource("4_wisxt")
+
+[node name="Trees" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.9, 1)
+repeat_size = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Trees"]
+texture = ExtResource("6_wax1t")
